@@ -10,17 +10,22 @@ npm install
 npm run dev
 ```
 
-## Deploy to Vercel (new project, Robbe's existing account)
+## Deploy to Vercel
 
-1. In the Vercel dashboard: **Add New… → Project**, import `Edge-Effect-Studio1/FieldScout` from GitHub.
-2. Set **Root Directory** to `web` (the repo root has other, unrelated folders).
-3. Framework preset auto-detects **Next.js** — leave build/output settings as default.
-4. Add environment variables (see below) under Project Settings → Environment Variables, for Production (and Preview if you want preview deploys to write real rows).
-5. Deploy. No other config needed.
+Source of truth is `web/` in the private repo. Vercel deploys from the public mirror `Edge-Effect-Studio1/fieldscout-web`. Publish changes with:
+
+```bash
+git subtree push --prefix=web https://github.com/Edge-Effect-Studio1/fieldscout-web.git main
+```
+
+1. The Vercel project must live under the team **Edge Effect Projects** (slug `edge-effect-studio`), never FieldScope / `field-scope1`. The current deployment is in the wrong team and must be moved.
+2. Import `Edge-Effect-Studio1/fieldscout-web` (repo root is the app; no Root Directory override needed). Framework preset auto-detects **Next.js**; leave build/output settings as default.
+3. Enter the environment variables below in the Vercel dashboard (Project Settings → Environment Variables), for Production (and Preview if you want preview deploys to write real rows).
+4. Deployment URL: to be recorded here once the project is moved.
 
 ## Environment variables
 
-Copy `.env.example` to `.env.local` for local dev. In Vercel, set:
+Copy `.env.example` to `.env.local` for local dev. In the Vercel dashboard, enter:
 
 | Variable | Where it's used | Notes |
 |---|---|---|
