@@ -31,6 +31,7 @@ const EXPERIENCE = [
   { value: "hobbyist", label: "Hobbyist" },
   { value: "serious", label: "Serious forager" },
   { value: "commercial", label: "Commercial picker" },
+  { value: "naturalist", label: "Naturalist / observer (don't collect)" },
 ];
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -65,6 +66,7 @@ export default function WaitlistForm() {
       species,
       experience: data.get("experience"),
       can_test_iphone: data.get("can_test_iphone") === "on",
+      observe_only: data.get("observe_only") === "on",
       company: data.get("company") || "",
     };
 
@@ -181,6 +183,11 @@ export default function WaitlistForm() {
       <label className="flex items-center gap-2 text-sm">
         <input type="checkbox" name="can_test_iphone" />
         I can test on iPhone this winter
+      </label>
+
+      <label className="flex items-center gap-2 text-sm">
+        <input type="checkbox" name="observe_only" />
+        I mostly observe, not collect
       </label>
 
       <button

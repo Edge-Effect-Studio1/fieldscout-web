@@ -50,6 +50,14 @@ const FAQ = [
     a: "Yes. Finds are private by default. If you choose to share one publicly, it's shown only as a coarse area on the map — never an exact point — so your spots stay yours.",
   },
   {
+    q: "Do I need to forage to use FieldScout?",
+    a: "No. FieldScout works just as well for naturalists who want to learn habitats and watch the season turn without ever picking anything. Logging sightings you don't collect is some of the most valuable data for the model.",
+  },
+  {
+    q: "Is collecting allowed where the forecast is green?",
+    a: "The forecast tells you about fruiting conditions, not legality — check the per-area badge (allowed / permit / look, don't pick / unknown) for that. Many Bay Area parks prohibit collecting even during a strong flush, so always check with the managing agency before you pick.",
+  },
+  {
     q: "When and where is the beta?",
     a: "Winter 2026–27, with a small group of Bay Area testers on iPhone via TestFlight. Free during the beta; founder pricing kicks in after.",
   },
@@ -70,7 +78,9 @@ export default function Home() {
           </h1>
           <p className="text-[var(--muted)] text-lg mb-8 max-w-md">
             FieldScout forecasts per-species fruiting conditions from weather, terrain, forest
-            cover, and sightings — so you spend less time walking and more time finding.
+            cover, and sightings — so you spend less time walking and more time finding. Learn
+            the habitats, watch the season turn, and know when conditions are right — whether
+            you pick or just look.
           </p>
           <div className="max-w-sm">
             <WaitlistForm />
@@ -125,6 +135,30 @@ export default function Home() {
           <SpeciesGroup title="Winter" items={WINTER_SPECIES} />
           <SpeciesGroup title="Spring" items={SPRING_SPECIES} />
           <SpeciesGroup title="Your spots" items={SPOT_SPECIES} note="Tracked year-round wherever you forage." />
+        </div>
+      </section>
+
+      {/* Look, don't pick */}
+      <section className="container-page py-12 md:py-16 border-t border-[var(--border)]">
+        <h2 className="text-2xl font-semibold mb-4">
+          &ldquo;Look, don&rsquo;t pick&rdquo; is a mode, not a limitation
+        </h2>
+        <div className="max-w-2xl space-y-3 text-sm text-[var(--muted)]">
+          <p>
+            Forecasts and habitat layers cover every landscape — including State Parks, regional
+            parks, and other land where collecting isn&rsquo;t allowed. We don&rsquo;t grey any
+            of it out. Every area shows a legality badge — allowed, permit required, look-
+            don&rsquo;t-pick, or unknown — so you always know where you stand before you go.
+          </p>
+          <p>
+            Logging what you see on protected land is legal, welcome, and genuinely the most
+            valuable data for the model: undisturbed habitat is where fruiting patterns show up
+            most clearly. Observations cross-post to{" "}
+            <a className="underline" href="https://www.inaturalist.org/" target="_blank" rel="noopener noreferrer">
+              iNaturalist
+            </a>{" "}
+            if you want them to count there too.
+          </p>
         </div>
       </section>
 
