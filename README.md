@@ -21,7 +21,7 @@ git subtree push --prefix=web https://github.com/Edge-Effect-Studio1/fieldscout-
 1. The Vercel project must live under the team **Edge Effect Projects** (slug `edge-effect-studio`), never FieldScope / `field-scope1`. The current deployment is in the wrong team and must be moved.
 2. Import `Edge-Effect-Studio1/fieldscout-web` (repo root is the app; no Root Directory override needed). Framework preset auto-detects **Next.js**; leave build/output settings as default.
 3. Enter the environment variables below in the Vercel dashboard (Project Settings → Environment Variables), for Production (and Preview if you want preview deploys to write real rows).
-4. Deployment URL: to be recorded here once the project is moved.
+4. Deployment URL (moved 2026-10-08, team Edge Effect Projects, project fieldscout-web): https://fieldscout-web-alpha.vercel.app. Vercel Authentication is on, so the site stays private until launch; turn it off under Settings → Deployment Protection to go public. The old copy in field-scope1 is to be deleted by Robbe.
 
 ## Environment variables
 
