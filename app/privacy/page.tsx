@@ -9,7 +9,7 @@ export default function PrivacyPage() {
         FieldScout is in a private pre-launch phase. Finds you log are private by default; public
         finds are only ever shown as coarse areas, never exact points. We'll publish a complete
         privacy policy before the beta opens. Questions in the meantime: {" "}
-        <a className="underline" href="mailto:robbe@edgeeffectstudio.com">robbe@edgeeffectstudio.com</a>.
+        <a className="underline" href="mailto:support@edgeeffectstudio.com">support@edgeeffectstudio.com</a>.
       </p>
       <a className="inline-block mt-8 underline text-sm" href="/">← Back home</a>
     </main>

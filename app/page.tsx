@@ -231,8 +231,8 @@ export default function Home() {
             <p className="font-medium text-[var(--fg)]">FieldScout</p>
             <p>A project by Edge Effect Studio.</p>
             <p>
-              <a className="underline" href="mailto:robbe@edgeeffectstudio.com">
-                robbe@edgeeffectstudio.com
+              <a className="underline" href="mailto:support@edgeeffectstudio.com">
+                support@edgeeffectstudio.com
               </a>
             </p>
           </div>
